@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontText } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
@@ -36,7 +36,7 @@ export default function RootLayout({
 			<body
 				className={clsx(
 					"min-h-screen bg-background font-sans antialiased",
-					fontSans.variable
+					fontText.className
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
@@ -49,11 +49,11 @@ export default function RootLayout({
 							<Link
 								isExternal
 								className="flex items-center gap-1 text-current"
-								href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-								title="nextui.org homepage"
+								href="https://github.com/SamMwenda"
+								title="SamMwenda Github"
 							>
 								<span className="text-default-600">Powered by</span>
-								<p className="text-primary">NextUI</p>
+								<p className="text-danger">SamMwenda</p>
 							</Link>
 						</footer>
 					</div>

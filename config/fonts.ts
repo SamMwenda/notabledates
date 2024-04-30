@@ -1,11 +1,13 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google"
+import { Jacques_Francois_Shadow as JacqShadow, Poppins } from "next/font/google"
 
-export const fontSans = FontSans({
+export const fontText = Poppins({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-sans",
+  style: "normal"
 })
 
-export const fontMono = FontMono({
+export const fontHeader = JacqShadow({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-mono",
+
 })
