@@ -19,7 +19,6 @@ export default function CardItem({ params }: CardItemProps) {
         getGeminiData(params).then((data) => {
             setData(data);
             const store = breakString(data.generatedText);
-            console.log(store);
             setFormattedData({
                 "title": store[0],
                 "desc": store[1],
