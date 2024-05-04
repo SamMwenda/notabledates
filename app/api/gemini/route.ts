@@ -6,7 +6,7 @@ import {
 } from "@google/generative-ai";
 
 const MODEL_NAME = "gemini-1.5-pro-latest";
-const API_KEY = process.env.GEMINI_API_KEY as string;
+const API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY as string;
 
 export async function POST(request: NextRequest) {
   const { searchParams } = new URL(request.url);
