@@ -1,3 +1,11 @@
+export interface IconSvgProps {
+  size?: number;
+  width?: number | string;
+  height?: number | string;
+  [key: string]: any; // Allow additional props
+}
+
+
 export type Location = {
   latitude: number;
   longitude: number;
