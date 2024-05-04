@@ -3,6 +3,17 @@ export type Location = {
   longitude: number;
 }
 
+export type GeminiParams = {
+  month: string;
+  date: string;
+}
+
+export type GeminiFormattedData = {
+  "title": string,
+  "desc": string,
+  "link": string,
+}
+
 export type OpenWeatherData = {
   "lat": number,
   "lon": number,
@@ -34,5 +45,5 @@ export type OpenWeatherData = {
 }
 
 export type GeminiData = {
-  "generatedText":string
+  "generatedText": string
 }

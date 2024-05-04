@@ -1,9 +1,16 @@
-export const getOpenWeatherData = async ({ lat, lon }: { lat: number, lon: number }) => {
-  const data = await fetch(`http://${process.env.API_URL}/api/openweather?lat=${lat}=&lon${lon}&appid=${process.env.OPENWEATHER_API_KEY}`);
-  if(!data.ok) {
-    throw new Error("Failed to fetch data")
+import { Location } from "@/types";
+
+export const getOpenWeatherData = async ({ location }: { location: Location }) => {
+  if (!location) {
+    throw new Error("Location is not defined");
   }
 
-  return data.json()
+  console.log(location);
+  const data = await fetch(`http://localhost:3000/api/openweather?lat=${location.latitude}&lon=${location.longitude}&appid=1617431d2dd38eebc6d469aae6e0fb31`);
 
+  if (!data.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return data.json();
 };

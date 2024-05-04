@@ -1,15 +1,10 @@
 import {
 	Navbar as NextUINavbar,
 	NavbarContent,
-	NavbarMenu,
-	NavbarMenuToggle,
-	NavbarBrand,
 	NavbarItem,
-	NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
 
 
 import { siteConfig } from "@/config/site";
@@ -17,12 +12,11 @@ import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
 	GithubIcon,
-	SearchIcon,
 } from "@/components/icons";
 
 export const Navbar = () => {
 	return (
-		<NextUINavbar maxWidth="xl" position="sticky" className="pt-12 h-5">
+		<NextUINavbar maxWidth="xl" position="sticky" className="pt-8 h-2">
 		
 
 			<NavbarContent
@@ -38,7 +32,7 @@ export const Navbar = () => {
             isExternal
 						as={Link}
 						className="text-sm font-normal text-default-600 bg-default-100"
-						href={siteConfig.links.sponsor}
+						href="https://github.com/SamMwenda"
 						startContent={<GithubIcon className="text-default-500" />}
 						variant="flat"
 					>

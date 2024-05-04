@@ -49,11 +49,11 @@ export default function RootLayout({
 							<Link
 								isExternal
 								className="flex items-center gap-1 text-current"
-								href="https://github.com/SamMwenda"
+								href="https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/"
 								title="SamMwenda Github"
 							>
 								<span className="text-default-600">Powered by</span>
-								<p className="text-danger">SamMwenda</p>
+								<p className="text-danger">Gemini-1.5-pro-latest</p>
 							</Link>
 						</footer>
 					</div>
