@@ -6,7 +6,7 @@ export const getOpenWeatherData = async ({ location }: { location: Location }) =
   }
 
   console.log(location);
-  const data = await fetch(`http://localhost:3000/api/openweather?lat=${location.latitude}&lon=${location.longitude}&appid=1617431d2dd38eebc6d469aae6e0fb31`);
+  const data = await fetch(`${process.env.APP_URL}api/openweather?lat=${location.latitude}&lon=${location.longitude}&appid=${process.env.OPENWEATHER_API_KEY}`);
 
   if (!data.ok) {
     throw new Error("Failed to fetch data");
