@@ -1,12 +1,21 @@
+'use client'
+
 import { title } from "@/components/primitives";
 import { fontHeader } from "@/config/fonts";
 import CardItem from "@/components/carditem";
 import WeatherIcon from "@/components/weathericon";
 import { GeminiParams } from "@/types";
 import { formattedDate, formattedDateDate, formattedDateMonth } from "@/utils/format";
+import { useState, useEffect } from 'react';
+
 
 export default function Home() {
-	const currentDate = new Date();
+	const [currentDate, setCurrentDate] = useState(new Date());
+
+
+	useEffect(() => {
+			setCurrentDate(new Date());
+	}, []);
 
 	const params: GeminiParams = {
 		month: formattedDateMonth(currentDate),
